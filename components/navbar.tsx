@@ -14,6 +14,7 @@ import { Input } from "@nextui-org/input";
 import { link as linkStyles } from "@nextui-org/theme";
 import NextLink from "next/link";
 import clsx from "clsx";
+import { Avatar } from "@nextui-org/avatar";
 
 import { siteConfig } from "@/config/site";
 import { ThemeSwitch } from "@/components/theme-switch";
@@ -21,7 +22,6 @@ import {
   TwitterIcon,
   GithubIcon,
   DiscordIcon,
-  HeartFilledIcon,
   SearchIcon,
   Logo,
 } from "@/components/icons";
@@ -94,14 +94,13 @@ export const Navbar = () => {
         <NavbarItem className="hidden lg:flex">{searchInput}</NavbarItem>
         <NavbarItem className="hidden md:flex">
           <Button
-            isExternal
             as={Link}
             className="text-sm font-normal text-default-600 bg-default-100"
-            href={siteConfig.links.sponsor}
-            startContent={<HeartFilledIcon className="text-danger" />}
+            href="/profile"
+            startContent={<Avatar src="https://i.pravatar.cc/150?u=a042581f4e29026024d" size="sm" />}
             variant="flat"
           >
-            Sponsor
+            Hanish
           </Button>
         </NavbarItem>
       </NavbarContent>
